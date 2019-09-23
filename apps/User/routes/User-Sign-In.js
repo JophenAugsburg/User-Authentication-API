@@ -18,9 +18,8 @@ let getUser;
 let checkAccount;
 let updateDatabase;
 userSignIn = async (body, res) => {
-
   // get some values
-  const userVals = await getUser(body.username, body.getValues);
+  const userVals = await getUser(body.username);
 
   // username incorrect
   if (userVals === null) {
@@ -33,11 +32,11 @@ userSignIn = async (body, res) => {
 
   // destructure the values
   const {
-    id, disabled, locked, password
+    id, disabled, locked, password, logs
   } = userVals;
 
   // check if passwords match
-  if (!(await bcrypt.compare(body.password, userVals.password))) {
+  if (!(await bcrypt.compare(body.password, password))) {
     await lockAccount(id, logs, true);
     await updateLogs(id, 'authentication', 2);
     res.send({
@@ -47,7 +46,7 @@ userSignIn = async (body, res) => {
     return;
   }
 
-  const check = await checkAccount(userVals.id, userVals.disabled, userVals.locked);
+  const check = await checkAccount(id, disabled, locked);
 
   // other account checks
   if (check === 'disabled') {
@@ -68,6 +67,8 @@ userSignIn = async (body, res) => {
   const lastLogged = await updateDatabase(id);
 
   userVals.password = undefined;
+  userVals.logs = undefined;
+  userVals.lastLogged = lastLogged;
   res.send({
     status: 'success',
     values: userVals
@@ -77,26 +78,13 @@ userSignIn = async (body, res) => {
 module.exports.routes = router;
 
 // get the user password and id
-getUser = async (username, getValues) => {
-  if (!getValues.includes('id')) {
-    getValues += ' id'
-  }
-  if (!getValues.includes('disabled')) {
-    getValues += ' disabled'
-  }
-  if (!getValues.includes('locked')) {
-    getValues += ' locked'
-  }
-  if (!getValues.includes('password')) {
-    getValues += ' password'
-  }
-
+getUser = async (username) => {
   const result = await graphql(userTypedefs,
-  `{ getUserByUsername(username: "${username}") { ${getValues} } }`,
-  userResolvers.Query).then(response => response.data.getUserByUsername);
+    `{ getUserByUsername(username: "${username}") { logs password locked disabled id } }`,
+    userResolvers.Query).then(response => response.data.getUserByUsername);
 
   return result;
-}
+};
 
 // check the account is allowed to login
 checkAccount = async (id, disabled, locked) => {

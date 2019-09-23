@@ -1,5 +1,3 @@
-// database
-const { dbs } = require('../main/configs/db/db_connection');
 // tools and helpers
 const { checkKey } = require('../main/controllers/api-tools/check-key');
 const { checkValues } = require('../main/controllers/api-tools/check-values');
@@ -12,7 +10,6 @@ const { verifyEmail } = require('../main/views/email.templates/verify.email');
 const { passwordResetEmail } = require('../main/views/email.templates/passwordReset.email');
 
 module.exports = {
-  dbs,
   checkKey,
   checkValues,
   checkQuery,
