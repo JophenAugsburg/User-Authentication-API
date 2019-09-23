@@ -28,19 +28,6 @@ const schema = new Schema({
     },
   },
   logs: [{}],
-  profilePage: {
-    image: String,
-    phone: String,
-    biography: String,
-    // social media
-    linkedin: String,
-    facebook: String,
-    twitter: String,
-    instagram: String,
-    github: String,
-    youtube: String,
-    stackoverflow: String
-  }
 });
 
 module.exports.User = dbs.db1().model('User', schema);

@@ -45,18 +45,6 @@ const createUser = async (
         answer: securityQuestionThreeAnswer,
       },
     },
-    profilePage: {
-      image: '',
-      phone: '',
-      biography: '',
-      linkedin: '',
-      facebook: '',
-      twitter: '',
-      instagram: '',
-      github: '',
-      youtube: '',
-      stackoverflow: ''
-    }
   });
   await user.save();
   return user;

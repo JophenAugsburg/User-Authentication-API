@@ -19,7 +19,6 @@ const defs = `
         dateLastLoggedIn: Date
         securityQuestions: JSON
         logs: [JSON]
-        profilePage: JSON
     }
 
     scalar Permission {
