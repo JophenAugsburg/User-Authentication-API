@@ -6,12 +6,6 @@ const db1 = () => {
   return mongoose;
 };
 
-const db2 = () => {
-  mongoose.connect(dbs.db2.database, { useNewUrlParser: true });
-  return mongoose;
-};
-
 module.exports.dbs = {
-  db1,
-  db2
+  db1
 };
