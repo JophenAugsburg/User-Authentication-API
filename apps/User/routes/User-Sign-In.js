@@ -19,7 +19,7 @@ let checkAccount;
 let updateDatabase;
 userSignIn = async (body, res) => {
   // get some values
-  const userVals = await getUser(body.username);
+  const userVals = await getUser(body.username, body.values);
 
   // username incorrect
   if (userVals === null) {
@@ -78,9 +78,9 @@ userSignIn = async (body, res) => {
 module.exports.routes = router;
 
 // get the user password and id
-getUser = async (username) => {
+getUser = async (username, values) => {
   const result = await graphql(userTypedefs,
-    `{ getUserByUsername(username: "${username}") { logs password locked disabled id } }`,
+    `{ getUserByUsername(username: "${username}") { ${values} logs password locked disabled id } }`,
     userResolvers.Query).then(response => response.data.getUserByUsername);
 
   return result;
