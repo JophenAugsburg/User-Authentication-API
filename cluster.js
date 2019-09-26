@@ -1,7 +1,17 @@
+/**
+ * Author
+ * Joseph Hentges
+ * September 2019
+ * https://joeyhentges.com
+ * 
+ * This is responsible for starting up the server in cluster mode.
+ * Servers will be started on each core, enabling the app to handle more traffic.
+ */
+
+ // libraries
 const chalk = require('chalk');
 const cluster = require('cluster');
 const cpuCount = require('os').cpus().length;
-require('dotenv').config();
 
 // Code to run if we're in the master process
 if (cluster.isMaster) {

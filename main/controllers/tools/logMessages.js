@@ -1,3 +1,14 @@
+/**
+ * Author
+ * Joseph Hentges
+ * September 2019
+ * https://joeyhentges.com
+ * 
+ * This holds a JSON object of pre-set log messages.
+ * New log messages should be entered here, or one could use the
+ * 'custom[0] value, which allows a custom log message
+ */
+
 module.exports.getLogMessage = {
   custom: {
     0: 'CUSTOM MESSAGE | ',

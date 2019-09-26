@@ -1,6 +1,5 @@
 // tools and helpers
 const { checkKey } = require('../main/controllers/api-tools/check-key');
-const { checkValues } = require('../main/controllers/api-tools/check-values');
 const { checkQuery } = require('../main/controllers/api-tools/check-query');
 const { updateLogs } = require('../main/controllers/tools/update.logs');
 const { updateLastLogged } = require('../main/controllers/tools/update.LastLoggedIn');
@@ -11,7 +10,6 @@ const { passwordResetEmail } = require('../main/views/email.templates/passwordRe
 
 module.exports = {
   checkKey,
-  checkValues,
   checkQuery,
   updateLogs,
   updateLastLogged,
