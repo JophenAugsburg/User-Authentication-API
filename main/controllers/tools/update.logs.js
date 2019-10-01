@@ -51,7 +51,7 @@ updateUser = async (id, type, messageNumber, logValue) => {
   // the log messagte contains the formatted date as well as the message
   const val = {
     time: newDate,
-    value: `${date} | ${getLogMessage[type.toLowerCase()][messageNumber]}${logValue}`
+    message: `${date} | ${getLogMessage[type.toLowerCase()][messageNumber]}${logValue}`
   };
   // mongoose request find by id and update their logs (array) element with the new log message
   const result = await User.findByIdAndUpdate(id,

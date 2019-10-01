@@ -18,7 +18,6 @@ const { routes } = require('./routes/routes');
 
 // the url variable is the path prefixing each item in this folder's url
 const contents = {
-  name: 'UserAuth',
   url: '/user',
   routes,
 };

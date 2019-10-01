@@ -18,7 +18,6 @@
 
  // the url variable is the path prefixing each item in this folder's url
 const contents = {
-  name: 'AccountHelpers',
   url: '/helpers',
   routes,
 };

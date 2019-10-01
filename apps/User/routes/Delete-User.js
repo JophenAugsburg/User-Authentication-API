@@ -1,28 +1,44 @@
-const bcrypt = require('bcrypt');
+/**
+ * Author
+ * Joseph Hentges
+ * September 2019
+ * https://joeyhentges.com
+ * 
+ * This is the router file that conitains the route for deleting a user
+ */
+
+// libraries
 const { graphql } = require('graphql');
+const bcrypt = require('bcrypt');
 const express = require('express');
+// middleware and query checking method
 const { checkKey } = require('../../tools');
+// GraphQL typedefs (schema) and resolvers (methods)
 const { userResolvers } = require('../controllers/resolvers/user.resolvers');
 const { userTypedefs } = require('../controllers/typeDefs/user.typedefs');
 
 const router = express.Router();
 
+// declare the function
 let deleteDoc;
 
+// declare / add the route
 router.delete('/delete', checkKey, async (req, res) => deleteDoc(req.body, res));
 
+// delete the user document in the database
 let getUser;
 let deleteUser;
 deleteDoc = async (body, res) => {
-  // parameters
+  // get the parameters
   const {
     username, password
   } = body;
 
-  // get some values
+  // using the username passed in, get the user id and passwoord
   const result = await getUser(username);
 
-  // check if passwords match
+  // check if password passed in and the password of the user match
+  // if they do not, send a failure response and return out of the function
   if (!(await bcrypt.compare(password, result.password))) {
     res.send({
       status: 'failure',
@@ -31,9 +47,11 @@ deleteDoc = async (body, res) => {
     return;
   }
 
-  // delete the user
+  // successfully sent in the correct password
+  // delete the user using it's id
   await deleteUser(result.id);
 
+  // send a success response
   res.send({
     status: 'success'
   });

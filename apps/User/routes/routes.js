@@ -1,6 +1,19 @@
+/**
+ * Author
+ * Joseph Hentges
+ * September 2019
+ * https://joeyhentges.com
+ * 
+ * This is the overall router file for this app
+ * Brings in all of hhe routes in the other files
+ * 
+ * This router is exported, and used in the app_main file
+ */
+
+// libraries
 const express = require('express');
 
-// Bring in routes
+// Bring in routes from other files in /routes/
 const GetUser = require('./Get-User');
 const CreateUser = require('./Create-User');
 const UpdateUser = require('./Update-User');
