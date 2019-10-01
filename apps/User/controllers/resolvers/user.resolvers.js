@@ -98,6 +98,8 @@ const updateUser = async (id, updateVariable, updateValue) => {
 
 // Functions condenced to be exported
 // GraphQL Style
+// Query =  function to deal with retreiving data
+// Mutation = function to deal with updating / changing data
 const userResolvers = {
   Query: {
     getUsers: () => getUsers(),

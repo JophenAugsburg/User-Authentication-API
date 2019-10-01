@@ -8,10 +8,12 @@
  * This is for use outside this app. Makes it eaiser to grab the needed items
  */
 
+// account verification models, resolvers and typedefs
 const { AccountVerification } = require('./models/AccountVerification');
 const { AccountVerificationResolvers } = require('./controllers/resolvers/AccountVerification.resolvers');
 const { AccountVerificationTypedefs } = require('./controllers/typeDefs/AccountVerification.typedefs');
 
+// account password reset models, resolvers and typedefs
 const { PasswordReset } = require('./models/PasswordReset');
 const { PasswordResetResolvers } = require('./controllers/resolvers/PasswordReset.resolvers');
 const { PasswordResetTypedefs } = require('./controllers/typeDefs/PasswordReset.typedefs');
