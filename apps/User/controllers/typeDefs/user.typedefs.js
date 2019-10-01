@@ -4,6 +4,22 @@ const defs = `
     scalar Date
     scalar JSON
 
+    type QUESTIONANSWER {
+        question: String
+        answer: String
+    }
+
+    type SECURITYQUESTIONS {
+        questionOne: QUESTIONANSWER
+        questionTwo: QUESTIONANSWER
+        questionThree: QUESTIONANSWER
+    }
+
+    type LOGS {
+        time: Date
+        message: String
+    }
+
     type User {
         id: ID
         locked: Boolean
@@ -17,8 +33,8 @@ const defs = `
         dateCreated: Date
         dateModified: Date
         dateLastLoggedIn: Date
-        securityQuestions: JSON
-        logs: [JSON]
+        securityQuestions: SECURITYQUESTIONS
+        logs: [LOGS]
     }
 
     scalar Permission {
