@@ -9,6 +9,8 @@
  * The URLs are in the .env files, under "Databases"
  */
 
+require('dotenv').config()
+
  // export the database URLs
 module.exports.dbs = {
   db1: {
