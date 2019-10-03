@@ -1,3 +1,13 @@
+/**
+ * Author
+ * Joseph Hentges
+ * October 2019
+ * https://joeyhentges.com
+ * 
+ * This is the overall router for this app. Bring in the routes from all of the other files
+ * and add it to this router, to be included in the overall routing.
+ */
+
 const express = require('express');
 
 // Bring in routes
