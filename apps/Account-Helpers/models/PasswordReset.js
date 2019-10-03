@@ -4,7 +4,7 @@
  * October 2019
  * https://joeyhentges.com
  * 
- * This is the model of the Account Verification mongoose database entry.
+ * This is the model of the Password Reset mongoose database entry.
  */
 
  // libraries, and getting the database connections
