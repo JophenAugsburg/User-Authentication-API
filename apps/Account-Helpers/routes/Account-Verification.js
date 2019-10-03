@@ -5,7 +5,7 @@
  * https://joeyhentges.com
  * 
  * This is the routes file for dealing with account verifications.
- * It handeels all of the account verification requests.
+ * It handles all of the account verification requests.
  *  - get account verification
  *  - send account verififed post - email url clicked
  *  - send account verification email
@@ -123,7 +123,7 @@ sendEmail = async (res, id, username, email, firstName) => {
     html: verifyEmail(
       process.env.LEAD_COMPANY_NAME,
       firstName,
-      `http://localhost:4000/verify-account/${verificationId.id}`
+      `${process.env.API_URL}/verify-account/${verificationId.id}`
     )
   };
   // send the email jusing the nodemailer function also brought in above
