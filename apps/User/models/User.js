@@ -4,7 +4,7 @@
  * September 2019
  * https://joeyhentges.com
  * 
- * This is the model of the mongoose database entry.
+ * This is the model of the User mongoose database entry.
  */
 
  // libraries, and getting the database connections
