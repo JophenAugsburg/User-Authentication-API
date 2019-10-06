@@ -3,9 +3,9 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This contains the resolver functions - buildschema for graphql queries / mutations
- * 
+ *
  * This essentially are the funftions that actually pull data from and update the database
  */
 

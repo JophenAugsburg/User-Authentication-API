@@ -3,12 +3,12 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This file is responsible for starting the server.
  * Runs it locally, or in deployment, on a liver server.
  */
 
- // libraries
+// libraries
 const chalk = require('chalk');
 const debug = require('debug')('app');
 const { app } = require('./app');

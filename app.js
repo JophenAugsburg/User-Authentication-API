@@ -3,12 +3,12 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This file sets up the server requirements and brings in all
- * routes from the main folder. 
+ * routes from the main folder.
  */
 
- // libraries
+// libraries
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');

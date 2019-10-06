@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This function handles updaging the usner's last time logged in.
  * Used in the /apps/user/routes/User-Sign-In.js route
  */
@@ -27,7 +27,7 @@ updateUser = async (id) => {
   // run a mongoose request to updare by id
   // set their dateLastLoggedIn to the new date
   // return their last time logged in
-  let lastLogged = await User.findByIdAndUpdate(id,
+  const lastLogged = await User.findByIdAndUpdate(id,
     { $set: { dateLastLoggedIn: newDate } },
     { new: false })
     .then(result => result);

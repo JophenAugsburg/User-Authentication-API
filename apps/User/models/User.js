@@ -3,11 +3,11 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the model of the User mongoose database entry.
  */
 
- // libraries, and getting the database connections
+// libraries, and getting the database connections
 const { Schema } = require('mongoose');
 const { dbs } = require('../../configs');
 

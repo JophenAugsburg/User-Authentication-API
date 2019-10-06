@@ -3,12 +3,12 @@
  * Joseph Hentges
  * October 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the resolvers files usec for graphql mutations and queries.
  * This handles how the data is retreived from or entered into the database.
  */
 
- // bringing in the account verification model
+// bringing in the account verification model
 const { AccountVerification } = require('../../models/AccountVerification');
 
 // get all of the account verification documents
@@ -17,7 +17,7 @@ const getAccountVerifications = () => AccountVerification.find();
 // get a single account verififcation doc by its ID
 const getAccountVerificationById = id => AccountVerification.findById(id);
 
-// create an new account verification document. 
+// create an new account verification document.
 /*
   - userID - the id of the user document this account verification is associated with
   - userFirstName - the first name of the user

@@ -3,14 +3,14 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This contains the typedefs string - buildschema for graphql queries / mutations
- * 
+ *
  * It declares the possible data that can be returned from the grapgql queries.
  * It must match the mongoose model for the most part with small changed.
  * Objects are declared as new types.
  * Queries and mutations / functions must also be decalured.
- * 
+ *
  * Queries are those that don't change the database
  * Mutations are those that do.
  */

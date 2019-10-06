@@ -3,7 +3,7 @@
  * Joseph Hentges
  * October 2019
  * https://joeyhentges.com
- * 
+ *
  * The typedefs file for Password Reset graphQL queries and mutations.
  * This is a schema for what data can be returned from the data, and what functions are 'callable'
  */

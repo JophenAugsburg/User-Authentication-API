@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This exports a function that handles checking GraphQL reponses.
  * Will return if the query, was bad / couldn't find what the request wanted.
  */

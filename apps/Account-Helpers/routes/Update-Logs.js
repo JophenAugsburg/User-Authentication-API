@@ -3,15 +3,15 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
- * 
+ *
+ *
  * This is the routes and helper function file for updating the accounts logs
  * If they was to do this via the api, send the post request to '/update-logs'
- * 
+ *
  * May never be used, but the option is there
  */
 
- // libraries and helper functions
+// libraries and helper functions
 const express = require('express');
 const { checkKey, updateLogs } = require('../../tools');
 

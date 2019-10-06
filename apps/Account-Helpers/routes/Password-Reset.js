@@ -3,7 +3,7 @@
  * Joseph Hentges
  * October 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the routes file for dealing with password resets.
  * It handles all of the password reset requests.
  *  - get password reset
@@ -11,7 +11,7 @@
  *  - send password reset email
  */
 
- // libraries
+// libraries
 const bcrypt = require('bcrypt');
 const express = require('express');
 const { graphql } = require('graphql');

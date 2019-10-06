@@ -3,12 +3,12 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the router file that conitains the routes for all Getter requests
  * Url's are redirected to these methods and they send back the data
  */
 
- // libraries
+// libraries
 const { graphql } = require('graphql');
 const express = require('express');
 // middleware and query checking method
@@ -59,7 +59,7 @@ getUserByUsername = async (body, res) => {
   const result = await graphql(userTypedefs,
     `{ getUserByUsername(username: "${body.username}") { ${values} } }`,
     userResolvers.Query).then(response => response.data);
-  
+
   // check the query for null or undefeined
   // I.E not found
   if (checkQuery(result, res)) {
@@ -118,4 +118,4 @@ removePasswordQuery = (valuesQuery) => {
     values = valA.join(' ');
   }
   return values;
-}
+};

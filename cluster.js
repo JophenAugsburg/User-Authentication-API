@@ -3,12 +3,12 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is responsible for starting up the server in cluster mode.
  * Servers will be started on each core, enabling the app to handle more traffic.
  */
 
- // libraries
+// libraries
 const chalk = require('chalk');
 const cluster = require('cluster');
 const cpuCount = require('os').cpus().length;

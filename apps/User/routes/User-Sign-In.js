@@ -3,13 +3,13 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This handles the function of updating the user documents.
- * 
+ *
  * This is responsible for handling the user authentication.
  */
 
- // libraries and other helpers
+// libraries and other helpers
 const bcrypt = require('bcrypt');
 const { graphql } = require('graphql');
 const express = require('express');

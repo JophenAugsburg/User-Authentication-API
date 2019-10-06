@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * Bring in any tools and templates thar are used across different apps in the apps folder
  * Middleware and helper functions placed here
  */

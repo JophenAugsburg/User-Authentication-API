@@ -3,14 +3,14 @@
  * Joseph Hentges
  * October 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the route and function export file for account locking.
  * This checks th user account logs and determines if they need to be locked.
  */
 
- // libraries
- const express = require('express');
- // bringing in the user model and helper functions
+// libraries
+const express = require('express');
+// bringing in the user model and helper functions
 const { User } = require('../../User/user.exports');
 const { checkKey, updateLogs } = require('../../tools');
 

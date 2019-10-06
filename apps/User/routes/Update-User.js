@@ -3,14 +3,14 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This handles the function of updating the user documents.
- * 
+ *
  * It can handle updating single elements, and arrays
  * Also, it can deal with uploading images (currently convers it to base64 string)
  */
 
- // libraries
+// libraries
 const express = require('express');
 const multer = require('multer');
 const { checkKey } = require('../../tools');
@@ -99,4 +99,4 @@ handleArrayDelete = async (body) => {
   // identifder = the element identifed as the one to be removed
   await User.findByIdAndUpdate(id,
     { $pull: { [array]: { [arrayIdentifier]: identifier } } }, { safe: true });
-}
+};

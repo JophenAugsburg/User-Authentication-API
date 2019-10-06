@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * Exporting the Admin model, resolvers and typedefs.
  * This is for use outside this app. Makes it eaiser to grab the needed items
  */

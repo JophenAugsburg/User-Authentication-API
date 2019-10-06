@@ -3,12 +3,12 @@
  * Joseph Hentges
  * October 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the resolvers files used for graphql mutations and queries.
  * This handles how the data is retreived from or entered into the database.
  */
 
- // bringing in the password reset model
+// bringing in the password reset model
 const { PasswordReset } = require('../../models/PasswordReset');
 
 // get all of the password reset documents

@@ -3,16 +3,16 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
- * 
+ *
+ *
  * This is the routes and helper function file for updating the accounts last time logged in
  * If they was to do this via the api, send the post request to '/update-last-logged-in'
- * 
+ *
  * May never be used, but the option is there
  * Primarily used for updating the user's last time logged in when they sign in
  */
 
- // libraries and helper functions
+// libraries and helper functions
 const express = require('express');
 const { checkKey, updateLastLogged } = require('../../tools');
 

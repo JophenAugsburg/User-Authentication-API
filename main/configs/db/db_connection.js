@@ -3,12 +3,12 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is responsible for initializing all of the MongoDB databases.
  * Returns each of the databse connections.
  */
 
- // libraries
+// libraries
 const mongoose = require('mongoose');
 const { dbs } = require('./db_config');
 

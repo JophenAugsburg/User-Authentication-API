@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This exports a middleware function used in every route.
  * It checks the API key(s) that are passed into the requests.
  */

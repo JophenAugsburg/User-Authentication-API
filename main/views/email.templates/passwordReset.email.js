@@ -3,13 +3,13 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is an HTML layout for password reset emails
  * It is used in nodemailer 'mailoptions' as the html layout for the
  * email sent to users.
  */
 
- /*
+/*
 companyName : the name of the company sending the email - in most cases contained in the .env file
 firstName : the first name of the user being sent the email
 link : the URL link they must go to to reset their password

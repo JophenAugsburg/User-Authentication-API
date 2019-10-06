@@ -3,11 +3,11 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This file is reponsible for updating the logs element in the User model (other model types with logs if any)
  */
 
- // bring in the log messages (pre-set JSON list), as well as any models with logs
+// bring in the log messages (pre-set JSON list), as well as any models with logs
 const { getLogMessage } = require('./logMessages');
 const { User } = require('../../../apps/User/user.exports');
 

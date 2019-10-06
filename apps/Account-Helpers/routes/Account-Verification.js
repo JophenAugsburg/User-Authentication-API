@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the routes file for dealing with account verifications.
  * It handles all of the account verification requests.
  *  - get account verification
@@ -11,7 +11,7 @@
  *  - send account verification email
  */
 
- // libraries
+// libraries
 const express = require('express');
 const { graphql } = require('graphql');
 // helper functions

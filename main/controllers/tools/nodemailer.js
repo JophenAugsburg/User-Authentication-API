@@ -3,7 +3,7 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This exports a function that handles emailing.
  * Will send emails to people based on the mailoptions.
  */
