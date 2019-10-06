@@ -58,14 +58,14 @@ updateAccount = async (id, logs, lock) => {
       // if there is a successfuly login attempt before 3 fails and within those 15 minutes,
       //  break out and set logs with a failed login attempt
       if (
-        logs[i].value.includes('Successfully logged in.')
-        || logs[i].value.includes('Successfully reset password - reset password through "Forgot Password"')
+        logs[i].message.includes('Successfully logged in.')
+        || logs[i].message.includes('Successfully reset password - reset password through "Forgot Password"')
       ) {
         break;
       }
 
       // if failed login attempt in logs, increment the failed login counter
-      if (logs[i].value.includes('Failed to logged in.')) {
+      if (logs[i].message.includes('Failed to logged in.')) {
         failedLogin += 1;
       }
 
