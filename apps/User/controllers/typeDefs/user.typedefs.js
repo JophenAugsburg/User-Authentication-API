@@ -22,18 +22,19 @@ const defs = `
     scalar Date
     scalar JSON
 
-    type QUESTIONANSWER {
+    scalar QUESTIONANSWER {
         question: String
         answer: String
     }
 
-    type SECURITYQUESTIONS {
+    scalar SECURITYQUESTIONS {
         questionOne: QUESTIONANSWER
         questionTwo: QUESTIONANSWER
         questionThree: QUESTIONANSWER
     }
 
-    type LOGS {
+    scalar LOGS {
+        id: ID
         time: Date
         message: String
     }
@@ -53,12 +54,6 @@ const defs = `
         dateLastLoggedIn: Date
         securityQuestions: SECURITYQUESTIONS
         logs: [LOGS]
-    }
-
-    scalar Permission {
-        title: String
-        type: String
-        description: String
     }
 
     type Query {

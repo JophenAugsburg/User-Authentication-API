@@ -120,7 +120,7 @@ module.exports.routes = router;
 getUser = async (username, values) => {
   // search the databse for a user by their username
   const result = await graphql(userTypedefs,
-    `{ getUserByUsername(username: "${username}") { ${values} logs password locked disabled id } }`,
+    `query{ getUserByUsername(username: "${username}") { ${values} logs password locked disabled id } }`,
     userResolvers.Query).then(response => response.data.getUserByUsername);
 
   // return the graphql response

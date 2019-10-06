@@ -3,19 +3,19 @@
  * Joseph Hentges
  * September 2019
  * https://joeyhentges.com
- * 
+ *
  * This is the router file that conitains the route for creating a new user
  * Form requests are sent here for signups
  */
 
- // libraries
- const { graphql } = require('graphql');
- const express = require('express');
- // middleware and query checking method
- const { checkKey } = require('../../tools');
- // GraphQL typedefs (schema) and resolvers (methods)
- const { userResolvers } = require('../controllers/resolvers/user.resolvers');
- const { userTypedefs } = require('../controllers/typeDefs/user.typedefs');
+// libraries
+const { graphql } = require('graphql');
+const express = require('express');
+// middleware and query checking method
+const { checkKey } = require('../../tools');
+// GraphQL typedefs (schema) and resolvers (methods)
+const { userResolvers } = require('../controllers/resolvers/user.resolvers');
+const { userTypedefs } = require('../controllers/typeDefs/user.typedefs');
 
 const router = express.Router();
 
