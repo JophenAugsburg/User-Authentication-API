@@ -1,7 +1,7 @@
 /**
  * Author
  * Joseph Hentges
- * September 2019
+ * November 2019
  * https://joeyhentges.com
  *
  *
@@ -13,6 +13,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const graphql = require('graphql');
+require('dotenv').config();
 const { checkKey, updateLogs } = require('../../tools');
 const { User, userResolvers, userTypedefs } = require('../../User/user.exports');
 
