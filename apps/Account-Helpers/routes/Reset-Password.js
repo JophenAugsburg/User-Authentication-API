@@ -38,6 +38,8 @@ resetPasswordFromPRK = async (body, res) => {
   const {
     passwordResetKey, userId
   } = body;
+
+  console.log(body)
   
   // check the passwordResetKeyMatcbes
   if (passwordResetKey !== process.env.PASSWORD_RESET_KEY) {
