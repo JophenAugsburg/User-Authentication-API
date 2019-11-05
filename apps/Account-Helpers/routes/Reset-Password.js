@@ -12,7 +12,7 @@
 // libraries and helper functions
 const express = require('express');
 const bcrypt = require('bcrypt');
-const graphql = require('graphql');
+const { graphql } = require('graphql');
 require('dotenv').config();
 const { checkKey, updateLogs } = require('../../tools');
 const { User, userResolvers, userTypedefs } = require('../../User/user.exports');
@@ -38,8 +38,6 @@ resetPasswordFromPRK = async (body, res) => {
   const {
     passwordResetKey, userId
   } = body;
-
-  console.log(body)
   
   // check the passwordResetKeyMatcbes
   if (passwordResetKey !== process.env.PASSWORD_RESET_KEY) {
@@ -60,6 +58,7 @@ resetPasswordFromPRK = async (body, res) => {
   res.send({
     status: 'success',
     message: 'Successfully set new password.',
+    userId,
     newPassword
   });
 };
@@ -71,9 +70,9 @@ resetPasswordFromUser = async (body, res) => {
   const {
     userId, currentPassword, newPassword
   } = body;
-  
+
   // get the user values
-  const password = await getUserPassword(userId);
+  const { password } = await getUserPassword(userId);
 
   // check current user password and passed in password are the same
   if (!(await bcrypt.compare(currentPassword, password))) {
@@ -120,5 +119,5 @@ setNewPassword = async (userId, newPassword) => {
 getUserPassword = async (userId) => {
   return await graphql(userTypedefs,
     `{ getUserById(id: "${userId}") { password } }`,
-    userResolvers.Query).then(response => response.data);
+    userResolvers.Query).then(response => response.data.getUserById);
 }
